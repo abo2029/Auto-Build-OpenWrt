@@ -18,6 +18,10 @@
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
+#添加5Gdev
+git clone https://github.com/abo2029/Auto-Build-OpenWrt
+cp -f ../PATCH/kernel_5Gdev/998-kernel-option-add-new-dev.patch ./target/linux/ramips/patches-5.4/998-kernel-option-add-new-dev.patch
+
 # Define My Package
 #git clone https://github.com/vernesong/OpenClash package/molun/luci-app-openclash
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome package/molun/luci-app-adguardhome
