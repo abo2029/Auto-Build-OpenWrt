@@ -96,6 +96,7 @@ jobs:
     - name: Download package
       id: package
       run: |
+        gh repo clone abo2029/Auto-Build-OpenWrt
         cd openwrt
         cp -f ../PATCH/kernel_5Gdev/998-kernel-option-add-new-dev.patch ./target/linux/ramips/patches-5.4/998-kernel-option-add-new-dev.patch
         make defconfig
